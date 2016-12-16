@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 464325458}
   - component: {fileID: 464325457}
   - component: {fileID: 464325459}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,10 +266,29 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: 275.1969, y: -175.89711}
+  - {x: 604.12256, y: -247.26778}
+  - {x: 563.6567, y: -228.78152}
+  - {x: 500.27728, y: -206.1205}
+  - {x: 486.67383, y: -206.23586}
+  - {x: 397.26056, y: -175.81638}
+  - {x: 361.6967, y: -174.58183}
+  - {x: 293.54318, y: -153.08533}
+  - {x: 252.09903, y: -147.33943}
+  - {x: 233.03848, y: -123.29587}
+  - {x: 159.45485, y: -99.717255}
   - {x: 103.17088, y: -71.18487}
-  - {x: -111.68583, y: -73.98302}
-  - {x: -261.47437, y: -162.17465}
+  - {x: 81.36168, y: -60.627666}
+  - {x: -34.52086, y: -60.768826}
+  - {x: -97.788, y: -89.00768}
+  - {x: -155.84505, y: -129.37318}
+  - {x: -202.37622, y: -152.99605}
+  - {x: -226.44382, y: -156.45375}
+  - {x: -291.97687, y: -169.72977}
+  - {x: -350.10965, y: -168.60855}
+  - {x: -408.94107, y: -190.47038}
+  - {x: -441.8371, y: -215.75685}
+  - {x: -517.8709, y: -220.18187}
+  - {x: -605.91534, y: -254.23247}
 --- !u!1 &1391810657
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +389,7 @@ GameObject:
   - component: {fileID: 1549674234}
   - component: {fileID: 1549674235}
   - component: {fileID: 1549674236}
+  - component: {fileID: 1549674237}
   m_Layer: 0
   m_Name: HeroStub01
   m_TagString: Untagged
@@ -436,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4092a521f9297a9468aedcb8abd35a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
 --- !u!50 &1549674234
 Rigidbody2D:
   serializedVersion: 4
@@ -450,20 +470,20 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 2
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1549674235
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549674230}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -482,6 +502,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e236c8c2d60f2d4e8eb71f8f30ad150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1549674237
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549674230}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.022526555, y: -0.026156902}
+  m_Size: {x: 0.3532936, y: 1.0333765}
+  m_Direction: 0
 --- !u!1 &1804053031
 GameObject:
   m_ObjectHideFlags: 0
