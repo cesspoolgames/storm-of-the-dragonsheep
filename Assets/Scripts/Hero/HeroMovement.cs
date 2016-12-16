@@ -29,8 +29,12 @@ public class HeroMovement : MonoBehaviour {
 
 	void FixedUpdate() {
 		var h = Input.GetAxisRaw("Horizontal");
-		var v = Input.GetAxisRaw("Vertical");
-		var movement = new Vector2(h, v) * speed;
-		rigidbody.MovePosition(rigidbody.position + movement * Time.deltaTime);
+		MoveHero(h);
+	}
+
+	void MoveHero(float h) {
+		var velocity = rigidbody.velocity;
+		velocity.x = h * speed;
+		rigidbody.velocity = velocity;
 	}
 }
