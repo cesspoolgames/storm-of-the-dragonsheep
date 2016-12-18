@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SheepMovement : MonoBehaviour {
 
+	public float moveForce = 40f;
+
 	new Rigidbody2D rigidbody;
 	BoxCollider2D boxCollider;
 
@@ -13,6 +15,6 @@ public class SheepMovement : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		rigidbody.AddForceAtPosition(new Vector2(-5f, 0), new Vector2(boxCollider.bounds.size.x / 2f, 0));
+		rigidbody.AddForce(new Vector2(-moveForce, 0));
 	}
 }
