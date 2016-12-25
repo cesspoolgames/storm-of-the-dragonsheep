@@ -25,4 +25,8 @@ public class SheepMovement : MonoBehaviour {
 	public bool isGoingLeft() {
 		return spriteRenderer.flipX == true;
 	}
+
+	public void FlipX() {
+		spriteRenderer.flipX = !spriteRenderer.flipX;
+	}
 }

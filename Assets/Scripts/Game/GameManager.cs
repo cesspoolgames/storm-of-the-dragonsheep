@@ -1,28 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MovementEffects;
 
-public class NormalLevelManager : MonoBehaviour {
+public class GameManager : MonoBehaviour {
+
+	protected GameManager instance;
 
 	public enum EnemyStartPosition {
 		Left,
 		Right
 	};
 
-	private float levelLeft;
-	private float levelRight;
+	private static float levelLeft;
+	private static float levelRight;
 
-	void Start () {
+	void Awake() {
+		if (instance) {
+			return;
+		}
+
+		instance = new GameManager();
 		levelLeft = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0f)).x;
 		levelRight = Camera.main.ViewportToWorldPoint(new Vector2(1f, 0f)).x;
 	}
 
-	public float GetLevelLeft() {
+	public static float GetLevelLeft() {
 		return levelLeft;
 	}
 
-	public float GetLevelRight() {
+	public static float GetLevelRight() {
 		return levelRight;
 	}
 
