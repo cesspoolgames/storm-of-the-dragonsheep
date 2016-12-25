@@ -284,7 +284,47 @@ Transform:
   m_LocalScale: {x: 2, y: 1.7300519, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &492261496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 492261498}
+  - component: {fileID: 492261497}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492261497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492261496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d45a899fddb4524b94f925e0ccb9f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &492261498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492261496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338005571
 GameObject:
@@ -295,6 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338005572}
   - component: {fileID: 1338005573}
+  - component: {fileID: 1338005574}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -313,7 +354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1338005573
 MonoBehaviour:
@@ -326,8 +367,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d8fdb7e9940014d81a339582fb86b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheep: {fileID: 1710372432000770, guid: 15ad1c3e644d6e0488dba39f86fed262, type: 2}
-  sheepCreationDelay: 1.1
+--- !u!114 &1338005574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1338005571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140e72b9445518f489202b81c245a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheepGenerationDelay: 1.2
 --- !u!1 &1391810657
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +393,7 @@ GameObject:
   - component: {fileID: 1391810658}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

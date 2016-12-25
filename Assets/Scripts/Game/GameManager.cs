@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	protected GameManager instance;
+	private static GameManager instance;
+
+	public static GameManager Instance {
+		get {
+			return instance;
+		}
+	}
 
 	public enum EnemyStartPosition {
 		Left,
@@ -15,11 +21,11 @@ public class GameManager : MonoBehaviour {
 	private static float levelRight;
 
 	void Awake() {
-		if (instance) {
-			return;
+		if (instance != null && instance != this) {
+			Destroy(gameObject);
 		}
+		instance = this;
 
-		instance = new GameManager();
 		levelLeft = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0f)).x;
 		levelRight = Camera.main.ViewportToWorldPoint(new Vector2(1f, 0f)).x;
 	}
