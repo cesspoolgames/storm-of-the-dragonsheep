@@ -30,12 +30,25 @@ public class GameManager : MonoBehaviour {
 		levelRight = Camera.main.ViewportToWorldPoint(new Vector2(1f, 0f)).x;
 	}
 
-	public static float GetLevelLeft() {
-		return levelLeft;
+	public static float LevelLeft {
+		get {
+            return levelLeft;
+		}
 	}
 
-	public static float GetLevelRight() {
-		return levelRight;
+	public static float LevelRight {
+		get {
+            return levelRight;
+		}
+	}
+
+
+	public static EnemyStartPosition RandomEnemyStartPosition() {
+		if (Random.value > 0.5f) {
+			return EnemyStartPosition.Left;
+		} else {
+			return EnemyStartPosition.Right;
+		}
 	}
 
 }

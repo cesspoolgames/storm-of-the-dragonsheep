@@ -6,6 +6,8 @@ using MovementEffects;
 public class LevelSheepGenerator : MonoBehaviour {
 
 	public float sheepGenerationDelay = 1.2f;
+	public GameObject sheep;
+	public float sheepOffscreenOffset = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +25,20 @@ public class LevelSheepGenerator : MonoBehaviour {
 	}
 
 	void CreateRandomSheep() {
-		Debug.Log("HEY!" + Random.value);
+		GameManager.EnemyStartPosition sheepStartPosition = GameManager.RandomEnemyStartPosition();
+		Vector2 newPosition;
+
+		newPosition.y = 0f;
+		bool flipX = false;
+		if (sheepStartPosition == GameManager.EnemyStartPosition.Left) {
+			newPosition.x = GameManager.LevelLeft - sheepOffscreenOffset;
+		} else {
+			newPosition.x = GameManager.LevelRight + sheepOffscreenOffset;
+			flipX = true;
+		}
+
+		var newSheep = Instantiate(sheep, newPosition, Quaternion.identity) as GameObject;
+		newSheep.GetComponent<SpriteRenderer>().flipX = flipX;
 	}
 
 }
