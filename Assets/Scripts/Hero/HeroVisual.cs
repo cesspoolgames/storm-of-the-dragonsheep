@@ -10,14 +10,14 @@ public class HeroVisual : MonoBehaviour {
 	}
 
 	void Update() {
-		var h = Input.GetAxisRaw("Horizontal");
-		FlipXIfNeeded(h);
+		var horizontal = Input.GetAxisRaw("Horizontal");
+		FlipXIfNeeded(horizontal);
 	}
 
-	void FlipXIfNeeded(float h) {
-		bool isGoingRight = h > 0;
-		if (h != 0) {
-			spriteRenderer.flipX = isGoingRight;
+	void FlipXIfNeeded(float horizontal) {
+		if (horizontal != 0f) {
+			bool isGoingRight = horizontal > 0f;
+			transform.localScale = new Vector2(isGoingRight ? 1f : -1f, 1f);
 		}
 	}
 
