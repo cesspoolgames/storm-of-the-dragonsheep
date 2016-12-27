@@ -12,12 +12,10 @@ public class HeroAction : MonoBehaviour {
 	}
 
 	public void HitStart() {
-		Debug.Log("Hit start");
 		hitArea.gameObject.SetActive(true);
 	}
 
 	public void HitEnd() {
-		Debug.Log("Hit end");
 		hitArea.gameObject.SetActive(false);
 	}
 }
