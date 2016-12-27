@@ -16,6 +16,25 @@ public class HeroMovement : MonoBehaviour {
 
 	void Update() {
 		HandleAttack();
+		KeepOnScreenArea();
+	}
+
+	void HandleAttack() {
+		var attackPressed = Input.GetButtonDown("Fire1");
+		if (attackPressed) {
+            animator.SetTrigger("Attack");
+        }
+	}
+
+	void KeepOnScreenArea() {
+		bool isOffscreen = false;
+		isOffscreen = Camera.main.WorldToViewportPoint(transform.position).y < 0f;
+		if (isOffscreen) {
+			// Back to action!
+			var newPosition = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 1f));
+			newPosition.z = transform.position.z;
+			transform.position = newPosition;
+		}
 	}
 
 	void FixedUpdate() {
@@ -29,10 +48,4 @@ public class HeroMovement : MonoBehaviour {
 		rigidbody.velocity = velocity;
 	}
 
-	void HandleAttack() {
-		var attackPressed = Input.GetButtonDown("Fire1");
-		if (attackPressed) {
-            animator.SetTrigger("Attack");
-        }
-	}
 }
