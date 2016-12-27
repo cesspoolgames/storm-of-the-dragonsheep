@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HeroVisual : MonoBehaviour {
-	SpriteRenderer spriteRenderer;
-
-	void Awake() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-	}
 
 	void Update() {
 		var horizontal = Input.GetAxisRaw("Horizontal");
