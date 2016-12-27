@@ -14,6 +14,18 @@ public class SheepMovement : MonoBehaviour {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
+	void Update() {
+		DestoryIfOutOfScreen();
+	}
+
+	void DestoryIfOutOfScreen() {
+		// If y is too down below...
+		bool shouldDestroy = Camera.main.WorldToViewportPoint(transform.position).y < -0.5f;
+		if (shouldDestroy) {
+			Destroy(gameObject);
+		}
+	}
+
 	void FixedUpdate() {
 		var force = new Vector2(moveForce, 0);
 		if (isGoingLeft()) {
