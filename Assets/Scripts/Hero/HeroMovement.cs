@@ -27,9 +27,7 @@ public class HeroMovement : MonoBehaviour {
 	}
 
 	void KeepOnScreenArea() {
-		bool isOffscreen = false;
-		isOffscreen = Camera.main.WorldToViewportPoint(transform.position).y < 0f;
-		if (isOffscreen) {
+		if (Utils.IsOffworld(transform)) {
 			// Back to action!
 			var newPosition = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 1f));
 			newPosition.z = transform.position.z;
