@@ -13,6 +13,7 @@ public class VillagerVisual : MonoBehaviour {
     void Update() {
         if (movementScript.IsFallen()) {
             transform.rotation = Quaternion.Euler(0, 0, -90f);
+            GetComponent<Animator>().enabled = false;
         } else {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
