@@ -28,9 +28,18 @@ public class VillagerMovement : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy") {
-            fallen = true;
+        switch (collision.gameObject.tag) {
+            case "Enemy":
+                fallen = true;
+                break;
+            case "Fruit":
+                handleFruitCollision(collision);
+                break;
         }
+    }
+
+    void handleFruitCollision(Collision2D collision) {
+        Destroy(collision.gameObject);
     }
 
     public bool IsFallen() {
