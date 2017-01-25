@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class VillagerMovement : MonoBehaviour {
 
-	public float speed = 1f;
-	bool fallen = false;
+    public float speed = 1f;
+    bool fallen = false;
 
-	new Rigidbody2D rigidbody;
+    new Rigidbody2D rigidbody;
 
-	void Awake() {
-		rigidbody = GetComponent<Rigidbody2D>();
-	}
+    void Awake() {
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
 
     void FixedUpdate() {
         if (!fallen) {
@@ -21,14 +21,20 @@ public class VillagerMovement : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.gameObject.tag == "Enemy") {
-			fallen = true;
-		}
-	}
+    void Update() {
+        if (Utils.IsOffworld(transform)) {
+            Destroy(gameObject);
+        }
+    }
 
-	public bool IsFallen() {
-		return fallen;
-	}
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Enemy") {
+            fallen = true;
+        }
+    }
+
+    public bool IsFallen() {
+        return fallen;
+    }
 
 }
