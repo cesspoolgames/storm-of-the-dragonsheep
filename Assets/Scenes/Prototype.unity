@@ -466,6 +466,7 @@ MonoBehaviour:
   sheepGenerationDelay: 1.2
   sheep: {fileID: 1710372432000770, guid: 15ad1c3e644d6e0488dba39f86fed262, type: 2}
   sheepOffscreenOffset: 1
+  sheepMaxStartYOffset: 4.2
 --- !u!1 &1391810657
 GameObject:
   m_ObjectHideFlags: 0
