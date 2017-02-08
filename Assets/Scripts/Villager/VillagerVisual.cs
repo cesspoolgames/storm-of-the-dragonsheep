@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class VillagerVisual : MonoBehaviour {
 
-    VillagerMovement movementScript;
+    VillagerLogic villagerLogic;
 
     void Awake() {
-        movementScript = GetComponent<VillagerMovement>();
+        villagerLogic = GetComponent<VillagerLogic>();
     }
 
     void Update() {
-        if (movementScript.IsFallen()) {
+        if (villagerLogic.IsFallen()) {
             transform.rotation = Quaternion.Euler(0, 0, -90f);
             GetComponent<Animator>().enabled = false;
         } else {

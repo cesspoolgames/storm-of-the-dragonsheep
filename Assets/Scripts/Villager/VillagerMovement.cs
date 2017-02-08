@@ -5,16 +5,18 @@ using UnityEngine;
 public class VillagerMovement : MonoBehaviour {
 
     public float speed = 1f;
-    bool fallen = false;
 
     new Rigidbody2D rigidbody;
 
+    VillagerLogic villagerLogic;
+
     void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
+        villagerLogic = GetComponent<VillagerLogic>();
     }
 
     void FixedUpdate() {
-        if (!fallen) {
+        if (!villagerLogic.IsFallen()) {
             Vector2 tempVelocity = rigidbody.velocity;
             tempVelocity.x = speed;
             rigidbody.velocity = tempVelocity;
@@ -25,25 +27,6 @@ public class VillagerMovement : MonoBehaviour {
         if (Utils.IsOffworld(transform)) {
             Destroy(gameObject);
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision) {
-        switch (collision.gameObject.tag) {
-            case "Enemy":
-                fallen = true;
-                break;
-            case "Fruit":
-                handleFruitCollision(collision);
-                break;
-        }
-    }
-
-    void handleFruitCollision(Collision2D collision) {
-        Destroy(collision.gameObject);
-    }
-
-    public bool IsFallen() {
-        return fallen;
     }
 
 }
