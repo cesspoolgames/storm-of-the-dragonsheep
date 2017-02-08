@@ -49,7 +49,6 @@ public class HeroMovement : MonoBehaviour {
         var layerMask = ~(1 << LayerMask.NameToLayer("Hero"));
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1f), 0.5f, layerMask);
         if (hit.collider != null) {
-            Debug.Log("FUN!" + Random.value + hit.collider);
             flipping = false;
         }
     }

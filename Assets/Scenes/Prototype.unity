@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 1831246593}
   - component: {fileID: 1831246595}
   - component: {fileID: 1831246596}
+  - component: {fileID: 1831246597}
   m_Layer: 8
   m_Name: Villager
   m_TagString: Villager
@@ -916,3 +917,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d3ce1fc8ffd704eb4a6e14ab018dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1831246597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831246589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbc905745bb2e54d97ce6e5755b2e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpRecoverRate: 40

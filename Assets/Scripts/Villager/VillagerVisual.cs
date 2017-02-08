@@ -16,6 +16,7 @@ public class VillagerVisual : MonoBehaviour {
             GetComponent<Animator>().enabled = false;
         } else {
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            GetComponent<Animator>().enabled = true;
         }
     }
 }
