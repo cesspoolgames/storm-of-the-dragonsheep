@@ -10,7 +10,8 @@ public class VillagerVisual : MonoBehaviour {
 
     void Update() {
         if (villagerLogic.IsFallen) {
-            transform.rotation = Quaternion.Euler(0, 0, -90f);
+            var angle = -90.0f * (1f - villagerLogic.NormalizedHP);
+            transform.rotation = Quaternion.Euler(0, 0, angle);
             GetComponent<Animator>().enabled = false;
         } else {
             transform.rotation = Quaternion.Euler(0, 0, 0);

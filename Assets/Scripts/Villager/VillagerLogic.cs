@@ -4,7 +4,8 @@ public class VillagerLogic : MonoBehaviour {
 
 	public float hpRecoverRate = 40.0f;
 
-	float hp = 100.0f;
+    const float maxHp = 100.0f;
+	float hp = maxHp;
 
     bool fallen = false;
 
@@ -17,6 +18,12 @@ public class VillagerLogic : MonoBehaviour {
     public float HP {
         get {
             return hp;
+        }
+    }
+
+    public float NormalizedHP {
+        get {
+            return hp / maxHp;
         }
     }
 
