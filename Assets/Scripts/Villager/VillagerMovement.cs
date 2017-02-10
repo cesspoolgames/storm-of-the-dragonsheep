@@ -14,7 +14,7 @@ public class VillagerMovement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (!villagerLogic.IsFallen()) {
+        if (!villagerLogic.IsFallen) {
             Vector2 tempVelocity = rigidbody.velocity;
             tempVelocity.x = speed;
             rigidbody.velocity = tempVelocity;

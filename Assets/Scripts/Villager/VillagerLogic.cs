@@ -8,6 +8,18 @@ public class VillagerLogic : MonoBehaviour {
 
     bool fallen = false;
 
+    public bool IsFallen {
+        get {
+            return fallen;
+        }
+    }
+
+    public float HP {
+        get {
+            return hp;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
         switch (collision.gameObject.tag) {
             case "Enemy":
@@ -30,7 +42,7 @@ public class VillagerLogic : MonoBehaviour {
         }
         switch (collider.gameObject.tag) {
 			case "PlayerTrigger":
-                if (IsFallen()) {
+                if (IsFallen) {
                     handleRevive();
                 }
                 break;
@@ -48,15 +60,11 @@ public class VillagerLogic : MonoBehaviour {
     void OnTriggerExit2D(Collider2D collider) {
         switch (collider.gameObject.tag) {
             case "PlayerTrigger":
-                if (IsFallen()) {
+                if (IsFallen) {
                     hp = 0;
                 }
                 break;
         }
-    }
-
-    public bool IsFallen() {
-        return fallen;
     }
 
 }
