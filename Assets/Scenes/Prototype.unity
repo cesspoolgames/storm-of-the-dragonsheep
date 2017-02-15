@@ -270,48 +270,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &804230867
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4708342060246122, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1006349943
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5f2518af9a111449b39bad65029410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitGenerationDelay: 1.4
+  fruitGenerationDelay: 1.18
   fruit: {fileID: 1257229041765396, guid: 410cd7ea33493824d86856d7f4035c6b, type: 2}
 --- !u!1 &1391810657
 GameObject:

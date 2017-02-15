@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbc905745bb2e54d97ce6e5755b2e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpRecoverRate: 40
+  hpRecoverRate: 70
 --- !u!212 &212320126977043198
 SpriteRenderer:
   m_ObjectHideFlags: 1
