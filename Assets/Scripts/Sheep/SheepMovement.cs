@@ -12,16 +12,6 @@ public class SheepMovement : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update() {
-        DestoryIfOutOfScreen();
-    }
-
-    void DestoryIfOutOfScreen() {
-		if (Utils.IsOffworld(transform)) {
-            Destroy(gameObject);
-        }
-    }
-
     void FixedUpdate() {
         var force = new Vector2(moveForce, 0);
         if (isGoingLeft()) {

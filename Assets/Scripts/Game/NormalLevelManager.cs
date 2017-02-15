@@ -2,8 +2,4 @@
 
 public class NormalLevelManager : MonoBehaviour {
 
-	void Start() {
-
-	}
-
 }
