@@ -16,7 +16,6 @@ public class LevelSheepGenerator : MonoBehaviour {
         });
     }
 
-    // Update is called once per frame
     IEnumerator<float> _SheepGenerationLoop() {
         while (true) {
             CreateRandomSheep();
