@@ -7,7 +7,7 @@ public class FruitVisual : MonoBehaviour {
     }
 
     Sprite GetRandomFruitSprite() {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Images/nicefruit.png");
+        Sprite[] sprites = (Sprite[])Resources.LoadAll<Sprite>("Images/nicefruit");
         var index = Random.Range(0, sprites.Length);
         return sprites[index];
     }

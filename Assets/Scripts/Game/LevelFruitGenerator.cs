@@ -23,5 +23,6 @@ public class LevelFruitGenerator : MonoBehaviour {
         var newX = Random.Range(GameManager.LevelLeft, GameManager.LevelRight);
         var newY = GameManager.LevelTop;
         var newFruit = Instantiate(fruit, new Vector2(newX, newY), Quaternion.identity) as GameObject;
+        newFruit.GetComponent<FruitVisual>().RandomizeImage();
     }
 }
