@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114355016038607628}
   - component: {fileID: 114112212747980572}
   - component: {fileID: 114794648422940316}
+  - component: {fileID: 114662826749494984}
   m_Layer: 8
   m_Name: Villager
   m_TagString: Villager
@@ -120,6 +121,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.1
+--- !u!114 &114662826749494984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339770848359890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97885580eaee0264397c4a7a10b4f694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114794648422940316
 MonoBehaviour:
   m_ObjectHideFlags: 1

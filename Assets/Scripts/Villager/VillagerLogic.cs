@@ -44,9 +44,6 @@ public class VillagerLogic : MonoBehaviour {
     }
 
     void OnTriggerStay2D(Collider2D collider) {
-        if (collider.gameObject.tag != "Untagged") {
-            Debug.Log(collider.gameObject.tag);
-        }
         switch (collider.gameObject.tag) {
 			case "PlayerTrigger":
                 if (IsFallen) {
@@ -58,7 +55,6 @@ public class VillagerLogic : MonoBehaviour {
 
     void handleRevive() {
         hp += hpRecoverRate * Time.deltaTime;
-        Debug.Log("revive!" + hp);
         if (hp >= 100.0f) {
             fallen = false;
         }
