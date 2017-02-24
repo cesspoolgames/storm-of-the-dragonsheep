@@ -9,6 +9,8 @@ public class VillagerLogic : MonoBehaviour {
 
     bool fallen = false;
 
+    private GameObject myFruit = null;
+
     public bool IsFallen {
         get {
             return fallen;
@@ -40,7 +42,11 @@ public class VillagerLogic : MonoBehaviour {
     }
 
     void handleFruitCollision(Collision2D collision) {
-        Destroy(collision.gameObject);
+        GameObject fruit = collision.gameObject;
+        bool taken = fruit.GetComponent<FruitLogic>().TakenByVillger(gameObject);
+        if (taken) {
+            myFruit = fruit;
+        }
     }
 
     void OnTriggerStay2D(Collider2D collider) {
